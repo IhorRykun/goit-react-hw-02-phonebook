@@ -1,7 +1,9 @@
-import { PhoneBook } from "components/phonebook/phonebook";
-
-
+import { PhoneBook } from 'components/phonebook/phonebook';
 
 export const App = () => {
-    return <PhoneBook  />;
+  return (
+    <div>
+      <PhoneBook />;
+    </div>
+  );
 };
