@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import css from '../phonebook/phonebook.module.css';
 import { ItemName } from './phoneName';
+import css from '../phonebook/phonebook.module.css';
 
 export class PhoneBook extends Component {
   state = {
@@ -9,22 +9,21 @@ export class PhoneBook extends Component {
     number: '',
   };
 
-  //   changeForm = (e) => {
-  //       this.setState({
-  //         e.currentTarget.value,
-
-  //     });
-  //   };
-
   changeForm = e => {
+    const { name, value } = e.currentTarget;
     this.setState({
-      name: e.currentTarget.value,
+      [name]: value,
     });
+  };
+
+  handleSubmitForm = e => {
+    e.preventDefault();
+    console.log(this.state);
   };
 
   render() {
     return (
-      <form className={css.form}>
+      <form className={css.form} onSubmit={this.handleSubmitForm}>
         <label>
           Name
           <input
@@ -49,7 +48,7 @@ export class PhoneBook extends Component {
             value={this.state.number}
           />
         </label>
-        <button>add contact</button>
+        <button type="submit">add contact</button>
         <ul>
           <ItemName />
         </ul>
