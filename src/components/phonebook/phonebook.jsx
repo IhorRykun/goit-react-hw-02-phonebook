@@ -16,9 +16,16 @@ export class PhoneBook extends Component {
     });
   };
 
+  reset = () => {
+    this.setState({
+      name: '',
+      number: '',
+    });
+  };
+
   handleSubmitForm = e => {
     e.preventDefault();
-    console.log(this.state);
+    this.reset();
   };
 
   render() {
