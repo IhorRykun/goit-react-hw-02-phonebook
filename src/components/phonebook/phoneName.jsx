@@ -1,3 +1,7 @@
-export const ItemName = ({name}) => {
-    return <li>{name}</li>
+export const ItemNameNumber = ({name, number}) => {
+    return (
+      <li>
+        {name}{number}
+      </li>
+    );
 } 

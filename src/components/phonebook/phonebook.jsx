@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ItemName } from './phoneName';
+import { ItemNameNumber } from './phoneName';
 import css from '../phonebook/phonebook.module.css';
 
 export class PhoneBook extends Component {
@@ -26,6 +26,7 @@ export class PhoneBook extends Component {
   handleSubmitForm = e => {
     e.preventDefault();
     this.reset();
+    console.log(e);
   };
 
   render() {
@@ -57,7 +58,7 @@ export class PhoneBook extends Component {
         </label>
         <button type="submit">add contact</button>
         <ul>
-          <ItemName />
+          <ItemNameNumber />
         </ul>
       </form>
     );
