@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { ItemNameNumber } from './phoneName';
 import css from '../phonebook/phonebook.module.css';
+import { nanoid } from 'nanoid';
+
+model.id = nanoid();
 
 export class PhoneBook extends Component {
   state = {
@@ -25,8 +28,12 @@ export class PhoneBook extends Component {
 
   handleSubmitForm = e => {
     e.preventDefault();
-    this.reset();
-    console.log(e);
+      this.reset();
+          const contact = {
+            id: shortid.nanoid(),
+            name: this.state.name,
+            number: this.state.number,
+          };
   };
 
   render() {
