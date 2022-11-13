@@ -3,5 +3,5 @@ export const ItemNameNumber = ({name, number}) => {
       <li>
         {name}{number}
       </li>
-    );
+    )
 } 

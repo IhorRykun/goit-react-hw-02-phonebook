@@ -3,8 +3,7 @@ import { ItemNameNumber } from './phoneName';
 import css from '../phonebook/phonebook.module.css';
 import { nanoid } from 'nanoid';
 
-model.id = nanoid();
-
+const id = nanoid();
 export class PhoneBook extends Component {
   state = {
     contacts: [],
@@ -28,12 +27,12 @@ export class PhoneBook extends Component {
 
   handleSubmitForm = e => {
     e.preventDefault();
-      this.reset();
-          const contact = {
-            id: shortid.nanoid(),
-            name: this.state.name,
-            number: this.state.number,
-          };
+    this.reset();
+    const contact = {
+      id: id,
+      name: this.state.name,
+      number: this.state.number,
+    };
   };
 
   render() {
