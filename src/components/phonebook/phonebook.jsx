@@ -5,7 +5,6 @@ import css from '../phonebook/phonebook.module.css';
 
 export class PhoneBook extends Component {
   state = {
-    contacts: [],
     name: '',
     number: '',
   };
@@ -26,12 +25,23 @@ export class PhoneBook extends Component {
 
   handleSubmitForm = e => {
     e.preventDefault();
-    this.reset();
+      this.reset();
+      const contactName = this.state.name;
+      const contactNumber = this.state.number;
+      this.props.onSubmit(contactName, contactNumber);
+      e.target.name.value = '';
+      e.target.number.value = '';
+      
   };
 
   render() {
     return (
-      <form className={css.form} onSubmit={this.handleSubmitForm}>
+      <form
+        autoComplete="off"
+        className={css.form}
+        onSubmit={this.handleSubmitForm}
+        onChange={this.changeForm}
+      >
         <label>
           Name
           <input
