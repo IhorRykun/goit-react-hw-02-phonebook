@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ItemNameNumber } from './phoneName';
 import css from '../phonebook/phonebook.module.css';
 
-
 export class PhoneBook extends Component {
   state = {
     name: '',
@@ -25,13 +24,12 @@ export class PhoneBook extends Component {
 
   handleSubmitForm = e => {
     e.preventDefault();
-      this.reset();
-      const contactName = this.state.name;
-      const contactNumber = this.state.number;
-      this.props.onSubmit(contactName, contactNumber);
-      e.target.name.value = '';
-      e.target.number.value = '';
-      
+    this.reset();
+    const contactName = this.state.name;
+    const contactNumber = this.state.number;
+    this.props.onSubmit(contactName, contactNumber);
+    e.target.name.value = '';
+    e.target.number.value = '';
   };
 
   render() {
@@ -68,7 +66,10 @@ export class PhoneBook extends Component {
         </label>
         <button type="submit">add contact</button>
         <ul>
-          <ItemNameNumber />
+          <ItemNameNumber
+            contactName={this.name}
+            contactNumber={this.contactNumber}
+          />
         </ul>
       </form>
     );

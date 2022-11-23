@@ -1,7 +1,8 @@
-export const ItemNameNumber = ({name, number}) => {
-    return (
-      <li>
-        {name}{number}
-      </li>
-    )
-} 
+export const ItemNameNumber = ({ contactName, contactNumber }) => {
+  return (
+    <li>
+      {contactName}
+      {contactNumber}
+    </li>
+  );
+};
