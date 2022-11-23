@@ -6,7 +6,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <PhoneBook addContact={this.addContact} />
+        <PhoneBook />
       </div>
     );
   }
