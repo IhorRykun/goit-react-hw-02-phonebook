@@ -1,6 +1,6 @@
-import { ContactsForm } from 'components/phonebook/contactForm';
-import { Contacts } from 'components/phonebook/Contacts';
-import { Filters } from 'components/phonebook/filter/filter';
+import { ContactsForm } from 'components/ContactForm/contactForm';
+import { Contacts } from 'components/Contacts/Contacts';
+import { Filters } from 'components/filter/filter';
 import React, { Component } from 'react';
 import css from '../App/app.module.css';
 

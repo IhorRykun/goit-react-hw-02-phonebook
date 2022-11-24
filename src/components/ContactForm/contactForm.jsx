@@ -1,6 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
-import css from '../phonebook/contactForm.module.css';
+import css from '../ContactForm/contactForm.module.css';
 
 export class ContactsForm extends React.Component {
   state = {
