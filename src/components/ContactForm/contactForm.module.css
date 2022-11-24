@@ -34,9 +34,8 @@
   cursor: pointer;
   width: 100px;
   height: 30px;
-  background-color: #2493eb;
+  background-color: green;
   color: white;
   border: none;
+  border-radius: 8px;
 }
-
-

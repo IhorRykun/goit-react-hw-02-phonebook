@@ -9,7 +9,7 @@ export const Contacts = ({ contacts, filter, filtered, deleteItem }) => {
         <li className={css.item} key={id} id={id}>
           <span className={css.name}>{name}: </span>
           <span className={css.number}>{number}</span>
-          <button classcName={css.button} onClick={e => deleteItem(e)}>
+          <button className={css.button__del} onClick={e => deleteItem(e)}>
             delete
           </button>
         </li>
