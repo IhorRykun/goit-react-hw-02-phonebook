@@ -1,5 +1,5 @@
 import React from 'react';
-import nanoid from 'shortid';
+import { nanoid } from 'nanoid';
 import css from '../ContactForm/contactForm.module.css';
 
 export class ContactsForm extends React.Component {
@@ -75,7 +75,11 @@ export class ContactsForm extends React.Component {
           />
         </label>
 
-        <button className={css.button} type="submit" disabled={this.state.isDisabled}>
+        <button
+          className={css.button}
+          type="submit"
+          disabled={this.state.isDisabled}
+        >
           add contact
         </button>
       </form>
