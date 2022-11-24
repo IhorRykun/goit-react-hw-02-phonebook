@@ -1,5 +1,5 @@
 import React from 'react';
-import shortid from 'shortid';
+import nanoid from 'shortid';
 import css from '../ContactForm/contactForm.module.css';
 
 export class ContactsForm extends React.Component {
@@ -32,7 +32,7 @@ export class ContactsForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const contact = {
-      id: shortid.generate(),
+      id: nanoid(),
       name: this.state.name,
       number: this.state.number,
     };
