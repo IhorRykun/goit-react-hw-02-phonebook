@@ -2,6 +2,7 @@ import { ContactsForm } from 'components/phonebook/contactForm';
 import { Contacts } from 'components/phonebook/Contacts';
 import { Filters } from 'components/phonebook/filter/filter';
 import React, { Component } from 'react';
+import css from '../App/app.module.css';
 
 export class App extends Component {
   state = {
@@ -39,7 +40,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={css.div}>
         <h1>Phonebook</h1>
         <ContactsForm
           addContact={this.addContact}

@@ -1,5 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
+import css from '../phonebook/contactForm.module.css';
 
 export class ContactsForm extends React.Component {
   state = {
@@ -42,7 +43,11 @@ export class ContactsForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        className={css.form}
+        onSubmit={this.handleSubmit}
+        autoComplete="off"
+      >
         <label>
           Name:
           <input
