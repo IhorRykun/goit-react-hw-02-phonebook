@@ -51,6 +51,7 @@ export class ContactsForm extends React.Component {
         <label>
           Name:
           <input
+            className={css.input__name}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -60,9 +61,10 @@ export class ContactsForm extends React.Component {
             onChange={e => this.onInputChange(e)}
           />
         </label>
-        <label>
+        <label className={css.lable}>
           Number:
           <input
+            className={css.input__number}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
