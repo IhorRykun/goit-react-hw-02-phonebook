@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
+import css from '../Contacts/Contacts.module.css';
 
 export const Contacts = ({ contacts, filter, filtered, deleteItem }) => {
   let rendered = filter === '' ? contacts : filtered();
   return (
-    <ul>
+    <ul className={css.list}>
       {rendered.map(({ name, id, number }) => (
-        <li key={id} id={id}>
-          <span>{name}: </span>
-          <span>{number}</span>
-          <button onClick={e => deleteItem(e)}>delete</button>
+        <li className={css.item} key={id} id={id}>
+          <span className={css.name}>{name}: </span>
+          <span className={css.number}>{number}</span>
+          <button classcName={css.button} onClick={e => deleteItem(e)}>
+            delete
+          </button>
         </li>
       ))}
     </ul>

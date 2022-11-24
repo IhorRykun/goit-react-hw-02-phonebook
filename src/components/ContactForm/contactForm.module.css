@@ -29,3 +29,14 @@
 .lable {
   margin-right: 10px;
 }
+
+.button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background-color: #2493eb;
+  color: white;
+  border: none;
+}
+
+

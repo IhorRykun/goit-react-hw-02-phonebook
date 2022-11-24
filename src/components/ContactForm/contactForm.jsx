@@ -75,7 +75,7 @@ export class ContactsForm extends React.Component {
           />
         </label>
 
-        <button type="submit" disabled={this.state.isDisabled}>
+        <button className={css.button} type="submit" disabled={this.state.isDisabled}>
           add contact
         </button>
       </form>

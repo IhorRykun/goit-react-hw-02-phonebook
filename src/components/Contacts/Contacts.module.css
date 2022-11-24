@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background-color: #2493eb;
+  color: white;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  margin: 15px;
+}
+
+.name {
+  margin-right: 6px;
+}
+.number {
+  margin-right: 10px;
+}
